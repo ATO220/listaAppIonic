@@ -7,7 +7,7 @@
 <ion-content padding>
   <ion-list>
       <ion-item-sliding class="animated fadeInDown"
-      *ngFor="let lista of listas" >
+      *ngFor="let lista of listas | filtroCompletado : false" >
       <button ion-item 
       (click)="listaSeleccionada(lista)">
       {{ lista.titulo }}

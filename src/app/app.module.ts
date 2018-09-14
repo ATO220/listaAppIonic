@@ -17,6 +17,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //Services
 import { ListAtoService } from '../services/listAto.service';
 
+//Pipes
+import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completado';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,7 +28,8 @@ import { ListAtoService } from '../services/listAto.service';
     PendientesPage,
     TabsPage,
     TerminadosPage,
-    AgregarPage
+    AgregarPage,
+    FiltroCompletadoPipe
   ],
   imports: [
     BrowserModule,
