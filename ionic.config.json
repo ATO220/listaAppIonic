@@ -1,0 +1,7 @@
+{
+  "name": "ListAtoApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,41 @@
+<!--
+  Generated template for the TerminadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Terminados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding class="animated fadeInDown"
+        *ngFor="let lista of listas" >
+        <button ion-item 
+        (click)="listaSeleccionada(lista)">
+        {{ lista.titulo }}
+  
+          <ion-note item-end>
+            {{ lista.items.length }} items
+          </ion-note>
+        </button>  
+        <ion-item-options side="right">
+        <button ion-button color="danger"
+            class="text-center"
+            icon-only
+            (click)="eliminarLista(lista)">
+        <ion-icon name="trash"></ion-icon>
+        </button>
+        </ion-item-options>
+  
+        </ion-item-sliding>
+     
+    </ion-list>
+
+</ion-content>
