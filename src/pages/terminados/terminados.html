@@ -14,28 +14,5 @@
 
 
 <ion-content padding>
-    <ion-list>
-        <ion-item-sliding class="animated fadeInDown"
-        *ngFor="let lista of listas | filtroCompletado : true" >
-        <button ion-item 
-        (click)="listaSeleccionada(lista)">
-        {{ lista.titulo }}
-  
-          <ion-note item-end>
-            {{ lista.items.length }} items
-          </ion-note>
-        </button>  
-        <ion-item-options side="right">
-        <button ion-button color="danger"
-            class="text-center"
-            icon-only
-            (click)="eliminarLista(lista)">
-        <ion-icon name="trash"></ion-icon>
-        </button>
-        </ion-item-options>
-  
-        </ion-item-sliding>
-     
-    </ion-list>
-
+   <app-listas [terminada]='true'></app-listas>
 </ion-content>

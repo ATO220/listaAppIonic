@@ -1,0 +1,33 @@
+<ion-list>
+    <ion-item-sliding class="animated fadeInDown"
+    #slidingItem *ngFor="let lista of listAtoService.listas | filtroCompletado : terminada" >
+    
+    <ion-item-options side="left">
+        <button ion-button color="secondary"
+            class="text-center"
+            icon-only
+            (click)="editarLista(lista, slidingItem)">
+            <ion-icon name="create"></ion-icon>
+        </button>
+    </ion-item-options>
+    
+    <button ion-item 
+    (click)="listaSeleccionada(lista)">
+    {{ lista.titulo }}
+
+      <ion-note item-end>
+        {{ lista.items.length }} items
+      </ion-note>
+    </button>  
+    <ion-item-options side="right">
+    <button ion-button color="danger"
+        class="text-center"
+        icon-only
+        (click)="eliminarLista(lista)">
+    <ion-icon name="trash"></ion-icon>
+    </button>
+    </ion-item-options>
+
+    </ion-item-sliding>
+ 
+</ion-list>

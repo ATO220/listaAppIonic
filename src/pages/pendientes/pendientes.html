@@ -5,29 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-      <ion-item-sliding class="animated fadeInDown"
-      *ngFor="let lista of listas | filtroCompletado : false" >
-      <button ion-item 
-      (click)="listaSeleccionada(lista)">
-      {{ lista.titulo }}
-
-        <ion-note item-end>
-          {{ lista.items.length }} items
-        </ion-note>
-      </button>  
-      <ion-item-options side="right">
-      <button ion-button color="danger"
-          class="text-center"
-          icon-only
-          (click)="eliminarLista(lista)">
-      <ion-icon name="trash"></ion-icon>
-      </button>
-      </ion-item-options>
-
-      </ion-item-sliding>
-   
-  </ion-list>
+<app-listas></app-listas>
   <ion-fab bottom right>
     <button ion-fab mini (click)="agregarLista()"><ion-icon name="add"></ion-icon></button>
   </ion-fab>

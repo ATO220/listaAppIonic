@@ -9,6 +9,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesPage } from '../pages/pendientes/pendientes';
 import { TerminadosPage } from '../pages/terminados/terminados';
 import { AgregarPage } from '../pages/agregar/agregar.component';
+import { ListasComponent } from '../components/listas.component';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,7 +30,8 @@ import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completa
     TabsPage,
     TerminadosPage,
     AgregarPage,
-    FiltroCompletadoPipe
+    FiltroCompletadoPipe,
+    ListasComponent
   ],
   imports: [
     BrowserModule,

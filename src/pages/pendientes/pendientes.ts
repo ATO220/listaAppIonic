@@ -17,13 +17,7 @@ export class PendientesPage {
     this.listas = listAtoService.listas;
   }
 
-  listaSeleccionada(lista:Lista){
-    this.navCtrl.push( AgregarPage,{
-      titulo : lista.titulo,
-      lista : lista
-    }
-    )
-  }
+  
   agregarLista(){
     const alerta = this.alertCtrl.create({
       title: 'Nueva Lista',
@@ -48,8 +42,5 @@ export class PendientesPage {
     alerta.present();
   }
 
-  eliminarLista( lista : Lista ){
-    this.listAtoService.eliminarLista( lista );
-    this.navCtrl.push( PendientesPage );
-  }
+ 
 }
